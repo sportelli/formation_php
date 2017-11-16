@@ -45,6 +45,22 @@ function csvToArray($fileName)
     return $users;  
 }
 
+function arrayToJson($users)
+{
+    // Array to JSON
+    return json_encode($users);
+}
+
+function jsonToArray($strUsers)
+{
+    // JSON to Array
+    return json_decode($strUsers);
+}
+
 $xmlFile = "resources/data.xml";
 $lines = csvToArray("resources/data.csv");
 //arrayToXml($lines, $xmlFile)
+print_r(arrayToJson($lines));
+print_r(jsonToArray(arrayToJson($lines)));
+$jsonStr = arrayToJson($lines);
+file_put_contents("resources/data.json" , $jsonStr);
