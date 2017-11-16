@@ -12,6 +12,13 @@ $person->addAttribute('id', 1);
 
 echo $xml->asXml();
 // Pour ecrire dans un fichier : 
-$xml->asXml("resources/export.xml");
+//$xml->asXml("resources/export.xml");
+
+// Pour ecrire dans un fichier "joli"
+$dom = new DOMDocument("1.0");
+$dom->preserveWhiteSpace = false;
+$dom->formatOutput = true;
+$dom->loadXML($xml->asXML());
+$dom->save("resources/export_nice.xml");
 
 ?>

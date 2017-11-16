@@ -53,4 +53,8 @@ echo "\n";
 echo strcmp($msg1, $msg4);
 echo "\n";
 
+$msg5 = "   felix    ";
+echo trim($msg5);
+
+
 ?>
