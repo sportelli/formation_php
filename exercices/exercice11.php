@@ -1,5 +1,12 @@
 <?php
 
+function bonjour()
+{
+    echo "bonjour <br />";
+}
+
+bonjour();
+
 function somme($a , $b )
 {
     return $a+$b;
