@@ -1,12 +1,12 @@
 <?php
-var_dump($_SERVER);
+$ipUtilisateur = $_SERVER['REMOTE_ADDR'];
+echo "Votre ip est " . $ipUtilisateur . "<br/>";
 
-$clientIP = $_SERVER['REMOTE_ADDR'];
 $port = $_SERVER['SERVER_PORT'];
-$page = $_SERVER['DOCUMENT_URI'];
-?>
+echo ($port == 443) ? "Sécurisée": "Non sécurisée";
+echo "<br />";
 
-Bienvenue<br/>
-Votre IP : <?=$clientIP ?> <br />
-Vous êtes connecté sur notre port <?=$port ?> <br />
-Vous accédez à la page <?=$page ?> <br />
+$page = $_SERVER['REQUEST_URI'];
+echo "Page demandée: " . $page . "<br/><br/>";
+
+print_r($_GET);
