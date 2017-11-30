@@ -6,11 +6,13 @@
     "authors": [
         {
             "name": "felix",
-            "email": "sportelli@gmail.com"
+            "email": "felix@sportelli.capital"
         }
     ],
     "require-dev": {
-        "phpunit/phpunit" : "^6.4"
+        "phpunit/phpunit" : "^6.4",
+        "phpdocumentor/phpdocumentor": "2.*",
+        "graphp/graphviz": "~0.2.0"
     },
     "autoload": {
         "psr-4": {
