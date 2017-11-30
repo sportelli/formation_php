@@ -27,10 +27,12 @@ function creationUtilisateur (array $user)
     . " VALUES (:identifiant, :motdepasse, :email) ";
 
     $stmt = $pdo->prepare($sql);
+    $pdo->beginTransaction();
     $stmt->execute( ["email" => $user["email"] , 
                 "identifiant" => $user["identifiant"], 
                 "motdepasse" => $user["motdepasse"]] 
             );
+    $pdo->commit();
 }
 
 function recuperationUtilisateurParIdentifiant(string $identifiant)
