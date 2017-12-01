@@ -12,3 +12,14 @@ function verif_identifiant_motdepasse(string $identifiant, string $motdepasse)
         return null;
     }
 }
+
+function ajout_nouvel_utilisateur(string $identifiant, string $email, string $motdepasse)
+{
+    $user = array();
+    $user["identifiant"] = $identifiant;
+    $user["email"] = $email;
+    $user["motdepasse"] = $motdepasse;
+    $user["nom"] = $identifiant;
+
+    
+}

@@ -53,3 +53,4 @@ function recup_utilisateur_par_identifiant($identifiant)
     return $user;
     
 }
+

@@ -8,6 +8,23 @@ $utilisateur = recupUtilisateurConnecte();
 
 if ( $utilisateur != null ){    
     echo "bonjour " . $utilisateur["nom"];
+
+    ?>
+        <form method="post" action="<?=CREATION_URL?>">
+            <label for="identifiant">Identifiant</label>
+            <input type="text" name="identifiant"/>
+            <br />
+            <label for="email">Email</label>
+            <input type="text" name="email"/>
+            <br />
+            <label for="motdepasse">Mot de passe</label>
+            <input type="password" name="motdepasse"/>
+            <br />
+            <input type="submit"/>
+        </form>
+
+    <?php
+
 }
 else 
 {
